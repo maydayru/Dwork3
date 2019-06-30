@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html class="no-js css-menubar" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+
+    <title>Заблокировано {{user.local.name}}| WeWork</title>
+
+    <link rel="apple-touch-icon" href="https://getbootstrapadmin.com/remark/global/assets/images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="https://getbootstrapadmin.com/remark/base/assets/images/favicon.ico">
+
+    <!-- Stylesheets -->
+    <link type="text/css" rel="stylesheet" href="stylesheets/bootstrap.min.css?v4.0.2">
+    <link type="text/css" rel="stylesheet" href="stylesheets/bootstrap-extend.min.css?v4.0.2">
+    <link type="text/css" rel="stylesheet" href="https://getbootstrapadmin.com/remark/base/assets/css/site.min.css?v4.0.2">
+    <!-- Skin tools (demo site only) -->
+    <link type="text/css" rel="stylesheet" href="stylesheets/skintools.min.css?v4.0.2">
+    <script href="javascripts/skintools.min.js?v4.0.2"></script>
+    <!-- Page -->
+    <link rel="stylesheet" href="https://getbootstrapadmin.com/remark/base/assets/examples/css/pages/lockscreen.min.css?v4.0.2">
+    <!-- Plugins -->
+    <link type="text/css" href="stylesheets/animsition.min.css?v4.0.2">
+    <link type="text/css" href="stylesheets/asScrollable.min.css?v4.0.2">
+    <link type="text/css" href="stylesheets/switchery.min.css?v4.0.2">
+    <link type="text/css" href="stylesheets/introjs.min.css?v4.0.2">
+    <link type="text/css" href="stylesheets/slidePanel.min.css?v4.0.2">
+    <link type="text/css" href="stylesheets/flag-icon.min.css?v4.0.2">
+
+    <!-- Page -->
+    <link rel="stylesheet" href="stylesheets/login.min.css?v4.0.2">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="stylesheets/web-icons.min.css?v4.0.2">
+    <link rel="stylesheet" href="stylesheets/brand-icons.min.css?v4.0.2">
+    <link rel='stylesheet' href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic">
+
+
+    <!--[if lt IE 9]>
+    <script src="javascripts/html5shiv.min.js?v4.0.2"></script>
+    <![endif]-->
+
+    <!--[if lt IE 10]>
+    <script src="javascripts/media.match.min.js?v4.0.2"></script>
+    <script src="javascripts/respond.min.js?v4.0.2"></script>
+    <![endif]-->
+
+    <!-- Scripts -->
+    <script src="javascripts/breakpoints.min.js?v4.0.2"></script>
+    <script>
+        Breakpoints();
+    </script>
+
+<body class="animsition page-locked layout-full page-dark">
+{{#if message}}
+    <div class="alert dark alert-icon alert-danger alert-dismissible" role="alert">
+        <i class="icon wb-close" aria-hidden="true"></i>{{message}}
+    </div>
+{{/if}}
+<!--[if lt IE 8]>
+<p class="browserupgrade">Вы используете <strong>устаревший</strong> браузер. Пожалуйста, <a href="http://browsehappy.com/">обновите свой браузер</a> для корректной работы.</p>
+<![endif]-->
+
+
+<!-- Page -->
+<div class="page vertical-align text-center" data-animsition-in="fade-in" data-animsition-out="fade-out">
+    <div class="page-content vertical-align-middle animation-slide-top animation-duration-1">
+        <div class="avatar avatar-lg">
+            <img src="/{{user.local.photo}}" alt="...">
+        </div>
+        <p class="locked-user">{{user.local.name}}</p>
+        <form method="post" action="/login">
+            <input type="hidden" value="{{user.local.email}}" name="email">
+            <div class="input-group">
+                <input type="password" class="form-control last" id="inputPassword" name="password"
+                       placeholder="Введите пароль">
+                <span class="input-group-btn">
+            <button type="submit" class="btn btn-primary"><i class="icon wb-unlock" aria-hidden="true"></i>
+              <span class="sr-only">unLock</span>
+            </button>
+          </span>
+            </div>
+        </form>
+        <p>Введите пароль для авторизации</p>
+        <p><a href="/login">Или авторизуйтесь как другой пользователь</a></p>
+
+        <footer class="page-copyright page-copyright-inverse">
+            <p>WeWork</p>
+        </footer>
+    </div>
+</div>
+<!-- End Page -->
+
+
+<!-- Core  -->
+<script src="javascripts/babel-external-helpers.js?v4.0.2"></script>
+<script src="javascripts/jquery.min.js?v4.0.2"></script>
+<script src="javascripts/popper.min.js?v4.0.2"></script>
+<script src="javascripts/bootstrap.min.js?v4.0.2"></script>
+<script src="javascripts/animsition.min.js?v4.0.2"></script>
+<script src="javascripts/jquery.mousewheel.js?v4.0.2"></script>
+<script src="javascripts/jquery-asScrollbar.min.js?v4.0.2"></script>
+<script src="javascripts/jquery-asScrollable.min.js?v4.0.2"></script>
+<script src="javascripts/jquery-asHoverScroll.min.js?v4.0.2"></script>
+
+<!-- Plugins -->
+<script src="javascripts/switchery.min.js?v4.0.2"></script>
+<script src="javascripts/intro.min.js?v4.0.2"></script>
+<script src="javascripts/screenfull.js?v4.0.2"></script>
+<script src="javascripts/jquery-slidePanel.min.js?v4.0.2"></script>
+
+<!-- Plugins For This Page -->
+<script src="javascripts/jquery.placeholder.js?v4.0.2"></script>
+
+<!-- Scripts -->
+<script src="javascripts/Component.min.js?v4.0.2"></script>
+<script src="javascripts/Plugin.min.js?v4.0.2"></script>
+<script src="javascripts/Base.min.js?v4.0.2"></script>
+<script src="javascripts/Config.min.js?v4.0.2"></script>
+
+<script src="javascripts/Menubar.min.js?v4.0.2"></script>
+<script src="javascripts/GridMenu.min.js?v4.0.2"></script>
+<script src="javascripts/Sidebar.min.js?v4.0.2"></script>
+<script src="javascripts/PageAside.min.js?v4.0.2"></script>
+<script src="javascripts/menu.min.js?v4.0.2"></script>
+
+<!-- Config -->
+<script src="javascripts/colors.min.js?v4.0.2"></script>
+<script src="javascripts/tour.min.js?v4.0.2"></script>
+<script>
+    Config.set('assets', 'https://getbootstrapadmin.com/remark/base/assets');
+</script>
+
+<!-- Page -->
+<script src="javascripts/Site.min.js?v4.0.2"></script>
+<script src="javascripts/asscrollable.min.js?v4.0.2"></script>
+<script src="javascripts/slidepanel.min.js?v4.0.2"></script>
+<script src="javascripts/switchery.min.js?v4.0.2"></script>
+<script src="javascripts/jquery-placeholder.min.js?v4.0.2"></script>
+<script>
+    (function(document, window, $) {
+        'use strict';
+
+        var Site = window.Site;
+        $(document).ready(function() {
+            Site.run();
+        });
+    })(document, window, jQuery);
+</script>
+</body>
+
+</html>

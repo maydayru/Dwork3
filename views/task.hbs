@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+<html class="no-js css-menubar" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="bootstrap admin template">
+    <meta name="author" content="">
+
+    <title>Задачи | WeWork</title>
+
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!-- Stylesheets -->
+    <link type="text/css" rel="stylesheet" href="stylesheets/bootstrap.min.css?v4.0.2">
+    <link type="text/css" rel="stylesheet" href="stylesheets/bootstrap-extend.min.css?v4.0.2">
+    <link type="text/css" rel="stylesheet" href="https://getbootstrapadmin.com/remark/base/assets/css/site.min.css?v4.0.2">
+    <link rel="stylesheet" href="stylesheets/glyphicons.min.css?v4.0.2">
+    <!-- Skin tools (demo site only) -->
+    <link type="text/css" rel="stylesheet" href="stylesheets/skintools.min.css?v4.0.2">
+    <script src="javascripts/skintools.min.js?v4.0.2"></script>
+
+    <!-- Plugins -->
+    <link type="text/css" rel="stylesheet" href="stylesheets/animsition.min.css?v4.0.2">
+    <link type="text/css" rel="stylesheet" href="stylesheets/asScrollable.min.css?v4.0.2">
+    <link type="text/css" rel="stylesheet" href="stylesheets/switchery.min.css?v4.0.2">
+    <link type="text/css" rel="stylesheet" href="stylesheets/introjs.min.css?v4.0.2">
+    <link type="text/css" rel="stylesheet" href="stylesheets/slidePanel.min.css?v4.0.2">
+    <link type="text/css" rel="stylesheet" href="stylesheets/flag-icon.min.css?v4.0.2">
+
+    <!-- Plugins For This Page -->
+    <link rel="stylesheet" href="https://getbootstrapadmin.com/remark/global/vendor/bootstrap-select/bootstrap-select.min.css?v4.0.2">
+    <link rel="stylesheet" href="https://getbootstrapadmin.com/remark/global/vendor/jquery-selective/jquery-selective.min.css?v4.0.2">
+    <link rel="stylesheet" href="https://getbootstrapadmin.com/remark/global/vendor/bootstrap-datepicker/bootstrap-datepicker.min.css?v4.0.2">
+    <link rel="stylesheet" href="https://getbootstrapadmin.com/remark/global/vendor/bootstrap-markdown/bootstrap-markdown.min.css?v4.0.2">
+    <link type="text/css" rel="stylesheet" href="stylesheets/slick.min.css?v4.0.2">
+
+
+    <!-- Page -->
+    <link rel="stylesheet" href="https://getbootstrapadmin.com/remark/base/assets/examples/css/apps/taskboard.min.css?v4.0.2">
+    <!-- Fonts -->
+    <link type="text/css" rel="stylesheet" href="../stylesheets/web-icons.min.css?v4.0.2">
+    <link type="text/css" rel="stylesheet" href="../stylesheets/brand-icons.min.css?v4.0.2">
+    <link type="text/css" rel='stylesheet' href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic">
+
+
+    <!--[if lt IE 9]>
+    <script src="../javascripts/html5shiv.min.js?v4.0.2"></script>
+    <![endif]-->
+
+    <!--[if lt IE 10]>
+    <script src="../javascripts/media.match.min.js?v4.0.2"></script>
+    <script src="../javascripts/respond.min.js?v4.0.2"></script>
+    <![endif]-->
+
+    <!-- Scripts -->
+    <script src="../javascripts/breakpoints.min.js?v4.0.2"></script>
+    <script>
+        Breakpoints();
+    </script>
+</head>
+<body class="animsition app-taskboard">
+<!--[if lt IE 8]>
+<p class="browserupgrade">Вы используете <strong>устаревший</strong> браузер. Пожалуйста, <a href="http://browsehappy.com/">обновите свой браузер</a> для корректной работы.</p>
+<![endif]-->
+
+
+<nav class="site-navbar navbar navbar-default navbar-fixed-top navbar-mega navbar-expand-md"
+     role="navigation">
+
+    <div class="navbar-header">
+
+
+        <div class="navbar-brand navbar-brand-center site-gridmenu-toggle" data-toggle="gridmenu">
+            <img class="navbar-brand-logo" src="/images/logo.webp" title="WeWork">
+            <span class="navbar-brand-text hidden-xs-down"> WeWork</span>
+        </div>
+    </div>
+
+    <div class="navbar-container container-fluid">
+        <!-- Navbar Collapse -->
+        <div class="collapse navbar-collapse navbar-collapse-toolbar" id="site-navbar-collapse">
+            <!-- Navbar Toolbar -->
+            <ul class="nav navbar-toolbar">
+                <li class="nav-item hidden-float" id="toggleMenubar">
+                    <a class="nav-link" data-toggle="menubar" href="#" role="button">
+                        <i class="icon hamburger hamburger-arrow-left">
+                            <span class="sr-only">Свернуть меню</span>
+                            <span class="hamburger-bar"></span>
+                        </i>
+                    </a>
+                </li>
+            </ul>
+            <!-- End Navbar Toolbar -->
+
+            <!-- Navbar Toolbar Right -->
+            <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">
+                <li class="nav-item dropdown">
+                    <a class="nav-link navbar-avatar" data-toggle="dropdown" href="#" aria-expanded="false"
+                       data-animation="scale-up" role="button">
+              <span class="avatar avatar-online">
+                   {{#if user.local.photo}}
+                       <img src="/{{ user.local.photo }}" alt="Фото">
+                   {{/if}}
+                  <i></i>
+              </span>
+                    </a>
+                    <div class="dropdown-menu" role="menu">
+                        <a class="dropdown-item" href="/profile" role="menuitem"><i class="icon wb-user" aria-hidden="true"></i> Профиль</a>
+                        <a class="dropdown-item" href="/editinfo" role="menuitem"><i class="icon wb-settings" aria-hidden="true"></i> Настройки</a>
+                        <div class="dropdown-divider" role="presentation"></div>
+                        <a class="dropdown-item" href="/logout" role="menuitem"><i class="icon wb-power" aria-hidden="true"></i> Выход</a>
+                    </div>
+                </li>
+            </ul>
+            <!-- End Navbar Toolbar Right -->
+        </div>
+        <!-- End Navbar Collapse -->
+
+
+    </div>
+</nav>
+<div class="site-menubar">
+    <div class="site-menubar-body">
+
+        <ul class="site-menu" data-plugin="menu">
+            <li class="site-menu-category">Основное</li>
+            <li class="site-menu-item has-sub">
+                <a href="/profile">
+                    <i class="site-menu-icon wb-dashboard" aria-hidden="true"></i>
+                    <span class="site-menu-title">Главная</span>
+                </a>
+            </li>
+            <li class="site-menu-item has-sub">
+                <a href="/chat">
+                    <i class="site-menu-icon wb-chat" aria-hidden="true"></i>
+                    <span class="site-menu-title">Чат</span>
+                </a>
+            </li>
+            <li class="site-menu-item has-sub">
+                <a href="/contact">
+                    <i class="site-menu-icon wb-users" aria-hidden="true"></i>
+                    <span class="site-menu-title">Контакты</span>
+                </a>
+            </li>
+            <li class="site-menu-item has-sub">
+                <a href="/news">
+                    <i class="site-menu-icon wb-library"></i>
+                    <span class="site-menu-title">Новости</span>
+                </a>
+            </li>
+            <li class="site-menu-item has-sub">
+                <a href="/tasks">
+                    <i class="site-menu-icon wb-briefcase" aria-hidden="true"></i>
+                    <span class="site-menu-title">Задачи</span>
+                </a>
+            </li>
+            <li class="site-menu-item has-sub">
+                <a href="/base">
+                    <i class="site-menu-icon wb-folder" aria-hidden="true"></i>
+                    <span class="site-menu-title">База знаний</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="site-menubar-footer">
+    <a href="/editinfo" class="fold-show" data-placement="top" data-toggle="tooltip"
+       data-original-title="Настройки">
+        <span class="icon wb-settings" aria-hidden="true"></span>
+    </a>
+    <a href="/lock" data-placement="top" data-toggle="tooltip" data-original-title="Заблокировать">
+        <span class="icon wb-eye-close" aria-hidden="true"></span>
+    </a>
+    <a href="/logout" data-placement="top" data-toggle="tooltip" data-original-title="Выход">
+        <span class="icon wb-power" aria-hidden="true"></span>
+    </a>
+</div>
+
+
+<!-- Page -->
+<div class="page">
+    <div class="page-header">
+        <h1 class="page-title">Задачи</h1>
+    </div>
+
+    <div class="page-content">
+        <ul class="taskboard-stages" id="taskboardStages"></ul>
+    </div>
+</div>
+<button class="site-action site-floataction btn-raised btn btn-success btn-floating"
+        type="button" data-toggle="modal" data-target="#addStageFrom">
+    <i class="icon wb-plus" aria-hidden="true"></i>
+</button>
+<div class="modal fade" id="addStageFrom" aria-hidden="true" aria-labelledby="addStageFrom"
+     role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-simple">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" aria-hidden="true" data-dismiss="modal">×</button>
+                <h4 class="modal-title">Создание новой группы</h4>
+            </div>
+            <div class="modal-body">
+                <form action="#" method="post" role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Название новой группы">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer text-left">
+                <button id="taskboardStageCreat" class="btn btn-primary" data-dismiss="modal" type="button">Создать</button>
+                <a class="btn btn-sm btn-white" data-dismiss="modal" href="javascript:void(0)">Отменить</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="site-footer-legal">© 2019 <a href="/">WeWork</a></div>
+    <div class="site-footer-right">
+        Sid Sid
+    </div>
+</footer>
+<!-- Core  -->
+<script src="../javascripts/babel-external-helpers.js?v4.0.2"></script>
+<script src="../javascripts/jquery.min.js?v4.0.2"></script>
+<script src="../javascripts/popper.min.js?v4.0.2"></script>
+<script src="../javascripts/bootstrap.min.js?v4.0.2"></script>
+<script src="../javascripts/animsition.min.js?v4.0.2"></script>
+<script src="../javascripts/jquery.mousewheel.js?v4.0.2"></script>
+<script src="../javascripts/jquery-asScrollbar.min.js?v4.0.2"></script>
+<script src="../javascripts/jquery-asScrollable.min.js?v4.0.2"></script>
+<script src="../javascripts/jquery-asHoverScroll.min.js?v4.0.2"></script>
+
+<!-- Plugins -->
+<script src="../javascripts/switchery.min.js?v4.0.2"></script>
+<script src="../javascripts/intro.min.js?v4.0.2"></script>
+<script src="../javascripts/screenfull.js?v4.0.2"></script>
+<script src="../javascripts/jquery-slidePanel.min.js?v4.0.2"></script>
+
+
+<!-- Plugins For This Page -->
+<script src="https://getbootstrapadmin.com/remark/global/vendor/jquery-ui/jquery-ui.min.js?v4.0.2"></script>
+<script src="https://getbootstrapadmin.com/remark/global/vendor/bootstrap-select/bootstrap-select.min.js?v4.0.2"></script>
+<script src="https://getbootstrapadmin.com/remark/global/vendor/jquery-selective/jquery-selective.min.js?v4.0.2"></script>
+<script src="https://getbootstrapadmin.com/remark/global/vendor/bootstrap-datepicker/bootstrap-datepicker.min.js?v4.0.2"></script>
+<script src="https://getbootstrapadmin.com/remark/global/vendor/bootstrap-markdown/bootstrap-markdown.js?v4.0.2"></script>
+<script src="https://getbootstrapadmin.com/remark/global/vendor/bootbox/bootbox.min.js?v4.0.2"></script>
+<!-- Scripts -->
+<script src="https://getbootstrapadmin.com/remark/global/js/Component.min.js?v4.0.2"></script>
+<script src="https://getbootstrapadmin.com/remark/global/js/Plugin.min.js?v4.0.2"></script>
+<script src="https://getbootstrapadmin.com/remark/global/js/Base.min.js?v4.0.2"></script>
+<script src="https://getbootstrapadmin.com/remark/global/js/Config.min.js?v4.0.2"></script>
+
+<script src="https://getbootstrapadmin.com/remark/base/assets/js/Section/Menubar.min.js?v4.0.2"></script>
+<script src="https://getbootstrapadmin.com/remark/base/assets/js/Section/GridMenu.min.js?v4.0.2"></script>
+<script src="https://getbootstrapadmin.com/remark/base/assets/js/Section/Sidebar.min.js?v4.0.2"></script>
+<script src="https://getbootstrapadmin.com/remark/base/assets/js/Section/PageAside.min.js?v4.0.2"></script>
+<script src="https://getbootstrapadmin.com/remark/base/assets/js/Plugin/menu.min.js?v4.0.2"></script>
+
+<!-- Config -->
+<script src="../javascripts/colors.min.js?v4.0.2"></script>
+<script src="../javascripts/tour.min.js?v4.0.2"></script>
+
+<!-- Page -->
+<script src="https://getbootstrapadmin.com/remark/base/assets/js/Site.min.js?v4.0.2"></script>
+<script src="https://getbootstrapadmin.com/remark/global/js/Plugin/asscrollable.min.js?v4.0.2"></script>
+<script src="https://getbootstrapadmin.com/remark/global/js/Plugin/slidepanel.min.js?v4.0.2"></script>
+<script src="https://getbootstrapadmin.com/remark/global/js/Plugin/switchery.min.js?v4.0.2"></script>
+<script src="https://getbootstrapadmin.com/remark/global/js/Plugin/bootstrap-select.min.js?v4.0.2"></script>
+<script src="https://getbootstrapadmin.com/remark/global/js/Plugin/bootstrap-datepicker.min.js?v4.0.2"></script>
+<script src="https://getbootstrapadmin.com/remark/global/js/Plugin/bootbox.min.js?v4.0.2"></script>
+<script src="../javascripts/Taskboard.min.js?v4.0.2"></script>
+<script src="https://getbootstrapadmin.com/remark/base/assets/examples/js/apps/taskboard.min.js?v4.0.2"></script>
+
+</body>
+
+</html>

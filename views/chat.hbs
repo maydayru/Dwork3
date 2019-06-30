@@ -1,0 +1,392 @@
+
+<!DOCTYPE html>
+<html class="no-js css-menubar" lang="ru" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="bootstrap admin template">
+    <meta name="author" content="">
+
+    <title>Чат | WeWork</title>
+
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!-- Stylesheets -->
+    <link type="text/css" rel="stylesheet" href="stylesheets/bootstrap.min.css?v4.0.2">
+    <link type="text/css" rel="stylesheet" href="stylesheets/bootstrap-extend.min.css?v4.0.2">
+    <link type="text/css" rel="stylesheet" href="../stylesheets/site.min.css?v4.0.2">
+    <link rel="stylesheet" href="stylesheets/glyphicons.min.css?v4.0.2">
+    <!-- Skin tools (demo site only) -->
+    <link type="text/css" rel="stylesheet" href="stylesheets/skintools.min.css?v4.0.2">
+    <script src="javascripts/skintools.min.js?v4.0.2"></script>
+
+
+    <!-- Plugins -->
+    <link type="text/css" rel="stylesheet" href="stylesheets/animsition.min.css?v4.0.2">
+    <link type="text/css" rel="stylesheet" href="stylesheets/asScrollable.min.css?v4.0.2">
+    <link type="text/css" rel="stylesheet" href="stylesheets/switchery.min.css?v4.0.2">
+    <link type="text/css" rel="stylesheet" href="stylesheets/introjs.min.css?v4.0.2">
+    <link type="text/css" rel="stylesheet" href="stylesheets/slidePanel.min.css?v4.0.2">
+    <link type="text/css" rel="stylesheet" href="stylesheets/flag-icon.min.css?v4.0.2">
+    <script src="javascripts/jquery.min.js?v4.0.2"></script>
+    <!-- Plugins For This Page -->
+    <link type="text/css" rel="stylesheet" href="stylesheets/slick.min.css?v4.0.2">
+    <link type="text/css" rel="stylesheet" href="stylesheets/dropify.min.css?v4.0.2">
+    <link rel="stylesheet" href="stylesheets/bootstrap-select.min.css?v4.0.2">
+
+    <!-- Page -->
+    <link type="text/css" rel="stylesheet" href="stylesheets/profile-v2.min.css?v4.0.2">
+    <link rel="stylesheet" href="stylesheets/message.min.css?v4.0.2">
+
+
+    <!-- Fonts -->
+    <link type="text/css" rel="stylesheet" href="stylesheets/web-icons.min.css?v4.0.2">
+    <link type="text/css" rel="stylesheet" href="stylesheets/brand-icons.min.css?v4.0.2">
+    <link type="text/css" rel='stylesheet' href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic">
+
+
+    <!--[if lt IE 9]>
+    <script src="javascripts/html5shiv.min.js?v4.0.2"></script>
+    <![endif]-->
+
+    <!--[if lt IE 10]>
+    <script src="javascripts/media.match.min.js?v4.0.2"></script>
+    <script src="javascripts/respond.min.js?v4.0.2"></script>
+    <![endif]-->
+
+    <!-- Scripts -->
+    <script src="javascripts/breakpoints.min.js?v4.0.2"></script>
+    <script>
+        Breakpoints();
+    </script>
+</head>
+<body class="animsition page-profile-v2">
+<!--[if lt IE 8]>
+<p class="browserupgrade">Вы используете <strong>устаревший</strong> браузер. Пожалуйста, <a href="http://browsehappy.com/">обновите свой браузер</a> для корректной работы.</p>
+<![endif]-->
+
+<nav class="site-navbar navbar navbar-default navbar-fixed-top navbar-mega navbar-expand-md"
+     role="navigation">
+
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler hamburger hamburger-close navbar-toggler-left hided"
+                data-toggle="menubar">
+            <span class="sr-only">Убрать меню</span>
+            <span class="hamburger-bar"></span>
+        </button>
+        <button type="button" class="navbar-toggler collapsed" data-target="#site-navbar-collapse"
+                data-toggle="collapse">
+            <i class="icon wb-more-horizontal" aria-hidden="true"></i>
+        </button>
+        <div class="navbar-brand navbar-brand-center site-gridmenu-toggle" data-toggle="gridmenu">
+            <img class="navbar-brand-logo" src="/images/logo.webp" title="Remark">
+            <span class="navbar-brand-text hidden-xs-down"> WeWork</span>
+        </div>
+    </div>
+
+    <div class="navbar-container container-fluid">
+        <!-- Navbar Collapse -->
+        <div class="collapse navbar-collapse navbar-collapse-toolbar" id="site-navbar-collapse">
+            <!-- Navbar Toolbar -->
+            <ul class="nav navbar-toolbar">
+                <li class="nav-item hidden-float" id="toggleMenubar">
+                    <a class="nav-link" data-toggle="menubar" href="#" role="button">
+                        <i class="icon hamburger hamburger-arrow-left">
+                            <span class="sr-only">Свернуть меню</span>
+                            <span class="hamburger-bar"></span>
+                        </i>
+                    </a>
+                </li>
+            </ul>
+            <!-- End Navbar Toolbar -->
+
+            <!-- Navbar Toolbar Right -->
+            <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">
+                <li class="nav-item dropdown">
+                    <a class="nav-link navbar-avatar" data-toggle="dropdown" href="#" aria-expanded="false"
+                       data-animation="scale-up" role="button">
+              <span class="avatar avatar-online">
+                   {{#if user.local.photo}}
+                       <img src="/{{ user.local.photo }}" alt="Фото">
+                   {{/if}}
+                  <i></i>
+              </span>
+                    </a>
+                    <div class="dropdown-menu" role="menu">
+                        <a class="dropdown-item" href="/profile" role="menuitem"><i class="icon wb-user" aria-hidden="true"></i> Профиль</a>
+                        <a class="dropdown-item" href="/editinfo" role="menuitem"><i class="icon wb-settings" aria-hidden="true"></i> Настройки</a>
+                        <div class="dropdown-divider" role="presentation"></div>
+                        <a class="dropdown-item" href="/logout" role="menuitem"><i class="icon wb-power" aria-hidden="true"></i> Выход</a>
+                    </div>
+                </li>
+            </ul>
+            <!-- End Navbar Toolbar Right -->
+        </div>
+        <!-- End Navbar Collapse -->
+
+
+    </div>
+</nav>
+<div class="site-menubar">
+    <div class="site-menubar-body">
+
+        <ul class="site-menu" data-plugin="menu">
+            <li class="site-menu-category">Основное</li>
+            <li class="site-menu-item has-sub">
+                <a href="/profile">
+                    <i class="site-menu-icon wb-dashboard" aria-hidden="true"></i>
+                    <span class="site-menu-title">Главная</span>
+                </a>
+            </li>
+            <li class="site-menu-item has-sub">
+                <a href="/chat">
+                    <i class="site-menu-icon wb-chat" aria-hidden="true"></i>
+                    <span class="site-menu-title">Чат</span>
+                </a>
+            </li>
+            <li class="site-menu-item has-sub">
+                <a href="/contact">
+                    <i class="site-menu-icon wb-users" aria-hidden="true"></i>
+                    <span class="site-menu-title">Контакты</span>
+                </a>
+            </li>
+            <li class="site-menu-item has-sub">
+                <a href="/news">
+                    <i class="site-menu-icon wb-library"></i>
+                    <span class="site-menu-title">Новости</span>
+                </a>
+            </li>
+            <li class="site-menu-item has-sub">
+                <a href="/tasks">
+                    <i class="site-menu-icon wb-briefcase" aria-hidden="true"></i>
+                    <span class="site-menu-title">Задачи</span>
+                </a>
+            </li>
+            <li class="site-menu-item has-sub">
+                <a href="/base">
+                    <i class="site-menu-icon wb-folder" aria-hidden="true"></i>
+                    <span class="site-menu-title">База знаний</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="site-menubar-footer">
+    <a href="/editinfo" class="fold-show" data-placement="top" data-toggle="tooltip"
+       data-original-title="Настройки">
+        <span class="icon wb-settings" aria-hidden="true"></span>
+    </a>
+    <a href="/lock" data-placement="top" data-toggle="tooltip" data-original-title="Заблокировать">
+        <span class="icon wb-eye-close" aria-hidden="true"></span>
+    </a>
+    <a href="/logout" data-placement="top" data-toggle="tooltip" data-original-title="Выход">
+        <span class="icon wb-power" aria-hidden="true"></span>
+    </a>
+</div>
+<!-- Page -->
+<div class="page">
+
+    <div class="page-main">
+        <!-- Chat Box -->
+        <div class="app-message-chats">
+            <div id="chat" class="chats">
+
+            </div>
+            <div id="status"></div>
+            <input id="username" type="hidden" value="{{user.local.name}}">
+            <input id="photo" type="hidden" value="{{user.local.photo}}">
+
+        </div>
+        <!-- End Chat Box -->
+
+        <!-- Message Input-->
+        <form class="app-message-input">
+            <div class="message-input">
+                <textarea id="textarea2" class="form-control" rows="1" placeholder="Напишите сообщение..."></textarea>
+
+            </div>
+            <button id="sendmsg" class="message-input-btn btn btn-primary" type="button">Отправить</button>
+        </form>
+        <!-- End Message Input-->
+
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+        <script>
+            (function(){
+                const element = function(id){
+                    return document.getElementById(id);
+                };
+                // Get Elements
+                // Подхватываем элементы
+                const status = element('status');
+                const messages = element('chat');
+                const textarea = element('textarea2');
+                const username = element('username');
+                const usrimage = element('photo') ;
+                // Set default status
+                // Устанавливаем стандартный статус
+                const statusDefault = status.textContent;
+                const setStatus = function(s){
+                    // Set status
+                    // Установка статуса
+                    status.textContent = s;
+                    if(s !== statusDefault){
+                        const delay = setTimeout(function () {
+                            setStatus(statusDefault);
+                        }, 2000);
+                    }
+                };
+                // Connect to socket.io
+                // Подключение к socket.io
+                const socket = io.connect('http://localhost:4000');
+                // Check for connection
+                // Проверка соединения
+                if(socket !== undefined){
+                    console.log('Connected to socket');
+                    // Handle Output
+                    // Обработка выходных данных
+                    socket.on('output', function(data){
+                        if(data.length){
+                            for(let x = 0; x < data.length; x++){
+                                const chat = document.createElement('div');
+                                const chat_avatar = document.createElement('div');
+                                const chat_body = document.createElement('div');
+                                const chat_content = document.createElement('div');
+                                const src_avatar = document.createElement('a');
+                                const img_avatar = document.createElement('img');
+                                const user_name = document.createElement('p');
+                                const date_msg = document.createElement('time');
+                                if (data[x].name === document.getElementById('username').value){
+                                chat.setAttribute('class', 'chat');
+                                }
+                                else if (data[x].name !== document.getElementById('username').value){
+                                    chat.setAttribute('class', 'chat chat-left');
+                                }
+                                chat_avatar.setAttribute('class', 'chat-avatar');
+                                chat_body.setAttribute('class', 'chat-body');
+                                chat_content.setAttribute('class', 'chat-content');
+                                date_msg.setAttribute('class', 'chat-time');
+                                chat.appendChild(chat_avatar);
+                                chat.appendChild(chat_body);
+                                chat_body.appendChild(chat_content);
+                                user_name.textContent = data[x].name;
+                                src_avatar.setAttribute('class', 'avatar');
+                                chat_avatar.appendChild(src_avatar);
+                                chat_avatar.appendChild(user_name);
+                                chat_content.textContent = data[x].message;
+                                src_avatar.appendChild(img_avatar);
+                                img_avatar.src=data[x].usrimage;
+                                date_msg.textContent = data[x].date;
+                                chat_content.appendChild(date_msg);
+                                chat.appendChild(document.createElement('br'));
+                                chat.appendChild(document.createElement('br'));
+                                messages.appendChild(chat);
+                                messages.insertBefore(chat, messages.lastChild);
+                            }
+                        }
+                    });
+                    // Get Status From Server
+                    // Получаем статус от сервера
+                    socket.on('status', function(data){
+                        // get message status
+                        //получаем статус сообщения
+                        setStatus((typeof data === 'object')? data.message : data);
+                        // If status is clear, clear text
+                        // Если статус пуст, то очищаем текст
+                        if(data.clear){
+                            textarea.value = '';
+                        }
+                    });
+                    // Handle Input
+                    // Обработка ввода
+                    textarea.addEventListener('keydown', function(event){
+                        if(event.which === 13 && event.shiftKey === false){
+                            // Emit to server input
+                            socket.emit('input', {
+                                name:username.value,
+                                message:textarea.value,
+                                usrimage:usrimage.value
+                            });
+                            event.preventDefault();
+                        }
+                    });
+                        $("#sendmsg").click(function () {
+                            socket.emit('input', {
+                                name:username.value,
+                                message:textarea.value,
+                                usrimage:usrimage.value
+                            });
+                        });
+                }
+            })();
+        </script>
+    </div>
+
+</div>
+
+
+
+
+
+<!-- Footer -->
+<!-- Core  -->
+<script src="javascripts/babel-external-helpers.js?v4.0.2"></script>
+
+<script src="javascripts/popper.min.js?v4.0.2"></script>
+<script src="javascripts/bootstrap.min.js?v4.0.2"></script>
+<script src="javascripts/animsition.min.js?v4.0.2"></script>
+<script src="javascripts/jquery.mousewheel.js?v4.0.2"></script>
+<script src="javascripts/jquery-asScrollbar.min.js?v4.0.2"></script>
+<script src="javascripts/jquery-asScrollable.min.js?v4.0.2"></script>
+<script src="javascripts/jquery-asHoverScroll.min.js?v4.0.2"></script>
+
+<!-- Plugins -->
+<script src="javascripts/switchery.min.js?v4.0.2"></script>
+<script src="javascripts/intro.min.js?v4.0.2"></script>
+<script src="javascripts/screenfull.js?v4.0.2"></script>
+<script src="javascripts/jquery-slidePanel.min.js?v4.0.2"></script>
+
+<!-- Plugins For This Page -->
+<script src="javascripts/bootbox2.min.js?v4.0.2"></script>
+<script src="javascripts/slick.min.js?v4.0.2"></script>
+<script src="javascripts/jquery.formatter.min.js?v4.0.2"></script>
+<script src="javascripts/bootstrap-select.min.js?v4.0.2"></script>
+<script src="javascripts/autosize.min.js?v4.0.2"></script>
+
+
+<!-- Scripts -->
+<script src="javascripts/Component.min.js?v4.0.2"></script>
+<script src="javascripts/Plugin.min.js?v4.0.2"></script>
+<script src="javascripts/Base.min.js?v4.0.2"></script>
+<script src="javascripts/Config.min.js?v4.0.2"></script>
+
+<script src="javascripts/Menubar.min.js?v4.0.2"></script>
+<script src="javascripts/GridMenu.min.js?v4.0.2"></script>
+<script src="javascripts/Sidebar.min.js?v4.0.2"></script>
+<script src="javascripts/PageAside.min.js?v4.0.2"></script>
+<script src="javascripts/menu.min.js?v4.0.2"></script>
+
+<!-- Config -->
+<script src="javascripts/colors.min.js?v4.0.2"></script>
+<script src="javascripts/tour.min.js?v4.0.2"></script>
+
+
+<!-- Page -->
+<script src="javascripts/Site.min.js?v4.0.2"></script>
+<script src="javascripts/switchery.min.js?v4.0.2"></script>
+<script src="javascripts/profile-v2.min.js?v4.0.2"></script>
+<script src="javascripts/bootbox.min.js?v4.0.2"></script>
+<script src="javascripts/formatter.min.js?v4.0.2"></script>
+<script src="javascripts/bootbox-sweetalert.min.js?v4.0.2"></script>
+<script src="javascripts/dropify2.min.js?v4.0.2"></script>
+<script src="javascripts/dropify.min.js?v4.0.2"></script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,220 @@
+[
+  {
+    "title": "Задачи",
+    "tasks": [
+      {
+        "complete": false,
+        "title": "Заполнить отчеты",
+        "description": "Пришло письмо из департамента, необходимо запонить отчеты.",
+        "priority": "urgent",
+        "duedate": "",
+        "members": [
+          {
+            "id": "uid_5",
+            "name": "Жанна Бойченко",
+            "img": "../user_image/d9ee0a78-19b6-455c-b14c-b4752f88af64.png"
+          }
+        ],
+        "subtasks": [
+          {
+            "title": "Какая-то подзадача №1",
+            "complete": true
+          },
+          {
+            "title": "Какая-то подзадача №2",
+            "complete": false
+          }
+        ],
+        "attachments": [
+          {
+            "title": "Прикрепление 1",
+            "src":"../../assets/examples/images/txt.png",
+            "size": "500K"
+          },
+          {
+            "title": "Прикрепление 2",
+            "src":"../../../global/photos/object-1-240x160.jpg",
+            "size": "2.04M"
+          }
+        ],
+        "comments": [
+          {
+            "user": "Богдан Ольховский",
+            "src": "../user_image/3ed58d6d-7543-4fe0-b13a-31b38a2a5bef.png",
+            "time": "2 дня назад",
+            "content": "А у меня тут возник кое-какой тестовый вопрос."
+          },
+          {
+            "user": "Мария Абрамова",
+            "src": "../user_image/91e3358a-2b3d-4355-9615-b0e0dc078d80.png",
+            "time": "16 часов назад",
+            "content": "У меня тоже вот в голову пришел тестовый вопрос."
+          }
+        ]
+      },
+      {
+        "complete": false,
+        "title": "Еще отчеты",
+        "description": "Необходимо еще заполнить отчеты",
+        "priority": "high",
+        "duedate": "",
+        "members": [
+          {
+            "id": "uid_5",
+            "name": "Жанна Бойченко",
+            "img": "../user_image/d9ee0a78-19b6-455c-b14c-b4752f88af64.png"
+          }, {
+            "id": "uid_3",
+            "name": "Богдан Ольховский",
+            "img": "../user_image/3ed58d6d-7543-4fe0-b13a-31b38a2a5bef.png"
+          }
+        ],
+        "subtasks": [
+          {
+            "title": "Подзадача №1",
+            "complete": false
+          },
+          {
+            "title": "Подзадача №2",
+            "complete": false
+          }
+        ],
+        "attachments": [],
+        "comments": [
+          {
+            "user": "Сергей Сидоров",
+            "src": "../user_image/e76cf9fb-df30-4d4c-931a-e050caf0195e.png",
+            "time": "2 дня назад",
+            "content": "Понял! Все будет сделано в срок."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "В процессе",
+    "tasks": [
+      {
+        "complete": false,
+        "title": "Тестовая задача №1",
+        "description": "А вот здесь находится тестовое описание задачи",
+        "priority": "normal",
+        "duedate": "29/10/2019",
+        "members": [
+          {
+            "id": "uid_5",
+            "name": "Жанна Бойченко",
+            "img": "../user_image/d9ee0a78-19b6-455c-b14c-b4752f88af64.png"
+          }, {
+            "id": "uid_4",
+            "name": "Михаил Боярский",
+            "img": "../user_image/e386d33f-3273-4186-9a00-a63dcbdeef6f.png"
+          }
+        ],
+        "subtasks": [],
+        "attachments": [],
+        "comments": [
+          {
+            "user": "Сергей Сидоров",
+            "src": "../user_image/e76cf9fb-df30-4d4c-931a-e050caf0195e.png",
+            "time": "2 дня назад",
+            "content": "Тестовый комментарий к задаче"
+          }
+        ]
+      },
+      {
+        "complete": false,
+        "title": "Еще одна тестовая задча №2",
+        "description": "Вот еще одно тестовое описание тестовой задачи №2",
+        "priority": "high",
+        "duedate": "",
+        "members": [
+          {
+            "id": "uid_5",
+            "name": "Жанна Бойченко",
+            "img": "../user_image/d9ee0a78-19b6-455c-b14c-b4752f88af64.png"
+          },{
+            "id": "uid_1",
+            "name": "Сергей Сидоров",
+            "img": "../user_image/e76cf9fb-df30-4d4c-931a-e050caf0195e.png"
+          }, {
+            "id": "uid_2",
+            "name": "Мария Абрамова",
+            "img": "../user_image/91e3358a-2b3d-4355-9615-b0e0dc078d80.png"
+          }
+        ],
+        "subtasks": [],
+        "attachments": [
+          {
+            "title": "Прикрепление 1",
+            "src":"../images/txt.png",
+            "size": "500K"
+          },
+          {
+            "title": "Прикрепление 2",
+            "src":"../images/txt.png",
+            "size": "2.04M"
+          },
+          {
+            "title": "Прикрепление 3",
+            "src":"../images/txt.png",
+            "size": "1.06M"
+          }
+        ],
+        "comments": []
+      }
+    ]
+  },
+  {
+    "title": "Выполнено",
+    "tasks": [
+      {
+        "complete": true,
+        "title": "Выполненная задача №1",
+        "description": "Тестовое описание выполненной тестовой задачи №1 ",
+        "priority": "normal",
+        "duedate": "",
+        "members": [
+          {
+            "id": "uid_6",
+            "name": "Марина Николаева",
+            "img": "../user_image/5ccc513f-aedb-4c72-a660-8aa73263639c.png"
+          }
+        ],
+        "subtasks": [],
+        "attachments": [],
+        "comments": []
+      },
+      {
+        "complete": true,
+        "title": "Выполненная задача №2",
+        "description": "Тестовое описание выполненной тестовой задачи №2",
+        "priority": "normal",
+        "duedate": "",
+        "members": [
+          {
+            "id": "uid_5",
+            "name": "Жанна Бойченко",
+            "img": "../user_image/d9ee0a78-19b6-455c-b14c-b4752f88af64.png"
+          }, {
+            "id": "uid_4",
+            "name": "Михаил Боярский",
+            "img": "../user_image/e386d33f-3273-4186-9a00-a63dcbdeef6f.png"
+          }
+        ],
+        "subtasks": [
+          {
+            "title": "Подзадача 1",
+            "complete": true
+          },
+          {
+            "title": "Подзадача 2",
+            "complete": true
+          }
+        ],
+        "attachments": [],
+        "comments": []
+      }
+    ]
+  }
+]
