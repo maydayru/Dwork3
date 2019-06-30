@@ -2,8 +2,8 @@
 Информационный портал.
 Information portal.
 ## Описание / Description:
-Данный проект был создан в качестве дипломной программы.
-This project was made for final exam at state university.
+Данный проект дает доступ к базе знаний, листу контактов, последним новостям.
+This project gives access to the knowledge base, contact list, and the latest news.
 ## Написан на / Used languages:
 Node.js, MongoDB, Handlebars, Passport.js
 ## Функционал / Functional:
