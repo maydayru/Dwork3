@@ -13,5 +13,7 @@ Node.js, MongoDB, Handlebars, Passport.js
 * Создание, редактирование, удаление новостей / Create, edit and deleter news
 * Лист контактов / Contact list
 * Пользовательские страницы + подписки (Подписаться, отписаться) / Others users pages (with sub, unsub function)
+## Credits
+Thanks Creation-Studio for template Remark (https://getbootstrapadmin.com/remark)
 
 
